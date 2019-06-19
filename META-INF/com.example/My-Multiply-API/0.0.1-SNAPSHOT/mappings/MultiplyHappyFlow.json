@@ -1,0 +1,26 @@
+{
+  "id" : "dcff76e3-67a5-4dcf-848b-9d2feed6fba7",
+  "request" : {
+    "url" : "/multiply",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['number2'] == 3)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['number1'] == 2)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "6",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "dcff76e3-67a5-4dcf-848b-9d2feed6fba7"
+}
