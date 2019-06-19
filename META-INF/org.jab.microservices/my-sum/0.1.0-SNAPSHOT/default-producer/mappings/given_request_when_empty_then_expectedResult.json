@@ -1,0 +1,21 @@
+{
+  "id" : "03d5eda4-9450-49d9-81f1-4c4c16789d5f",
+  "request" : {
+    "url" : "/sum",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"result\":0}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "03d5eda4-9450-49d9-81f1-4c4c16789d5f"
+}

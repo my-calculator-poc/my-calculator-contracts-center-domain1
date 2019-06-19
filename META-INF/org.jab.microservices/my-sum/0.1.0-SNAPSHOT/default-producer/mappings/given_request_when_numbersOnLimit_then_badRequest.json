@@ -1,0 +1,22 @@
+{
+  "id" : "14d1c70e-eb6e-4dd9-b208-9ac65de0ae95",
+  "request" : {
+    "url" : "/sum",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['number2'] == 3)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['number1'] == 1001)]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "14d1c70e-eb6e-4dd9-b208-9ac65de0ae95"
+}

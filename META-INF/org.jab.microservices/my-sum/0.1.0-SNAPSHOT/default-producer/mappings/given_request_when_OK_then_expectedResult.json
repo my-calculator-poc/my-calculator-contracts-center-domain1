@@ -1,0 +1,26 @@
+{
+  "id" : "65ff8b15-79df-4a2f-abf3-f20c57e2c407",
+  "request" : {
+    "url" : "/sum",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['number1'] == 1)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['number2'] == 3)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"result\":4}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "65ff8b15-79df-4a2f-abf3-f20c57e2c407"
+}
